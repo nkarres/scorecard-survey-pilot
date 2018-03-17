@@ -1,0 +1,149 @@
+
+
+.btn-green {
+    background-color: #1ab394;
+    color: #fff;
+    border-radius: 3px;
+}
+.btn-green:focus,
+.btn-green:hover {
+    background-color: #18a689;
+    color: #fff;
+}
+.panel-footer {
+    padding: 0 15px;
+    border: none;
+    text-align: right;
+    background-color: #fff;
+}
+
+
+/* custom CSS for Water Funds Scorecard pilot surveyjs */
+
+button.guide{
+    display: inline-block;
+}
+
+div[data-bind="html: question.processedHtml"]{
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    width: 100%;
+    padding-right: 2em;
+    margin-left: -1em;
+}
+
+
+#sq_100 > div > div[data-bind="html: question.processedHtml"]{
+    border: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #555;
+    padding-left: 15px;
+    display: none;
+}
+
+nav ul {
+    padding: 10px 0 15px 0;
+    margin: 0;
+    text-align: justify;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav a {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #999;
+    font-size: 0.9em; 
+    text-decoration: none; 
+}
+
+nav a:hover {
+    color: white;  
+}
+
+nav a:active {
+    color: #333;  
+}
+
+.feedback .sg-question-title label {
+  color: #999;
+  font-weight: 500;
+  font-size: 0.8em
+}
+
+.feedback textarea {
+background-color: rgb(240, 240, 240)
+}
+
+h4.sv_page_title span {
+    font-size: 2em;
+    font-weight: 700
+}
+
+/*h4.sv_p_title span {
+    font-size: 1.4em;
+    font-weight: 300
+}*/
+
+h5.sv_q_title{
+    font-size: 1.1em
+}
+
+.sv_q_description span {
+    margin-left: 1.2em;
+}
+
+a > button {
+    background-color: #000 !important;
+    text-decoration: none !important
+}
+
+input[type="button"][value="Remove"] {
+    background-color: #666 !important;
+}
+
+.modal {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    color: rgb(50, 50, 50);
+}
+
+.modal h2 {
+    font-size: 1.1em;
+}
+
+.modal p, .modal ul li {
+    font-size: 0.9em;
+    margin-left: 2em;
+}
+
+.modal blockquote p {
+    border-left: 2px solid rgb(240, 240, 240);
+    margin-left: 1em;
+    padding-left: 1em;
+    font-style: italic;
+}
+
+div.sv_progress {
+    margin-top: 5em;
+}
+
+/*div.panel_break {
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}*/
+
+input, textarea {
+    font-family: Arial !important;
+    font-size: 14px !important;
+}
