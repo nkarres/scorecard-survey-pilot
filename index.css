@@ -62,7 +62,7 @@ nav li {
 
 nav a {
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-    color: #999;
+    color: rgb(200, 200, 200);
     font-size: 0.9em; 
     text-decoration: none; 
 }
@@ -108,8 +108,8 @@ a > button {
     text-decoration: none !important
 }
 
-input[type="button"][value="Remove"] {
-    background-color: #666 !important;
+a > button:hover {
+    background-color: #555 !important;
 }
 
 .modal {
@@ -146,4 +146,18 @@ div.sv_progress {
 input, textarea {
     font-family: Arial !important;
     font-size: 14px !important;
+}
+
+input[value^="Add"], input[value^="Remove"] {
+    font-size: 12px !important;
+    line-height: 2em !important;
+    padding: 0 1em !important;
+}
+
+input[type="button"][value="Remove"] {
+    background-color: #666 !important;
+}
+
+input[type="button"][value="Remove"]:hover {
+    background-color: #333 !important;
 }

@@ -67,6 +67,10 @@ survey.onPartialSend.add(function () {
   $("nav").css("display", "block")
 });
 
+survey.onAfterRenderPage.add(function(){
+		$("html,body").scrollTop(0);
+	});
+
 
 // trying to do error checking
 $(document).ready(function(){
