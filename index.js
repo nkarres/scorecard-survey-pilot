@@ -54,15 +54,16 @@ if (prevData) {
     }
 }
 
+
+// custom scripts ///////////////////////////////////////////////////
 // show nav bar after first page
 survey.onPartialSend.add(function () {
   $("nav").css("display", "block")
 });
-
+// scroll to top for nav bar
 survey.onAfterRenderPage.add(function(){
 		$("html,body").scrollTop(0);
 	});
-
 
 // trying to do error checking
 $(document).ready(function(){
@@ -109,22 +110,11 @@ $(function(){
 })
 
 
-// Guidance button for modal
-// jQuery.holdReady(true);
-// setTimeout(function(){ jQuery.holdReady(false); }, 500);
-// $(document).ready(function(){
-//     $("button#guide").click(function(){
-//         $("div.guide").slideToggle();
-//     });
-// });
-
-$(function(){
-   $("button.guide").click(function () {
-      $(this).text(function(i, text){
-          return text === "Guidance" ? "Hide Guidance" : "Guidance";
-      })
-   });
-})
+// format number inputs
+$("[type='number'").on('keyup', function(){
+    var n = parseInt($(this).val().replace(/\D/g,''),10);
+    $(this).val(n.toLocaleString());
+});
 
 
 // <optgroup> hack for impacts
@@ -177,5 +167,14 @@ survey
 
         $( "option:contains('" + optLast2 + "')" ).replaceWith( "<optgroup label='" + optLast2 + "'" );
         $( "option:contains('" + optLast2 + "')" ).after( "</optgroup>" );
+    });
+
+// format numbers
+survey
+    .onCurrentPageChanged
+    .add(function () {
+        new AutoNumeric.multiple("[placeholder='hectares'], [placeholder='count'], [placeholder='households']", { digitGroupSeparator : ' ', decimalPlaces: 0 });
+        new AutoNumeric.multiple("[placeholder='USD']", { currencySymbol : '$', digitGroupSeparator : ' ', decimalPlaces: 0 });
+        new AutoNumeric.multiple("[placeholder='%']", { suffixText : '%', digitGroupSeparator : ' ', decimalPlaces: 0 });
     });
 
