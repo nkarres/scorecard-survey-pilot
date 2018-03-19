@@ -33,7 +33,7 @@ div[data-bind="html: question.processedHtml"]{
     margin-left: -1em;
 }
 
-#sq_100 > div > div[data-bind="html: question.processedHtml"]{
+#sq_100 div[data-bind="html: question.processedHtml"]{
     border: none;
 }
 
@@ -56,7 +56,7 @@ body {
 nav {
     background-color: #555;
     padding-left: 15px;
-    display: none;
+    display: block;
 }
 
 nav ul {
