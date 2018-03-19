@@ -45,7 +45,7 @@ body {
 nav {
     background-color: #555;
     padding-left: 15px;
-    /*display: none;*/
+    display: none;
 }
 
 nav ul {
