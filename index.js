@@ -168,13 +168,3 @@ survey
         $( "option:contains('" + optLast2 + "')" ).replaceWith( "<optgroup label='" + optLast2 + "'" );
         $( "option:contains('" + optLast2 + "')" ).after( "</optgroup>" );
     });
-
-// format numbers
-survey
-    .onCurrentPageChanged
-    .add(function () {
-        new AutoNumeric.multiple("[placeholder='hectares'], [placeholder='count'], [placeholder='households']", { digitGroupSeparator : ' ', decimalPlaces: 0 });
-        new AutoNumeric.multiple("[placeholder='USD']", { currencySymbol : '$', digitGroupSeparator : ' ', decimalPlaces: 0 });
-        new AutoNumeric.multiple("[placeholder='%']", { suffixText : '%', digitGroupSeparator : ' ', decimalPlaces: 0 });
-    });
-
