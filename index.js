@@ -33,6 +33,11 @@ function saveSurveyData(survey) {
         .setItem(storageName, JSON.stringify(data));
 }
 
+//save the data every 10 seconds
+timerId = window.setInterval(function () {
+    saveSurveyData(survey);
+}, 10000);
+
 survey
     .onPartialSend
     .add(function (survey) {
