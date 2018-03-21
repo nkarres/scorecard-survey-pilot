@@ -33,7 +33,7 @@ timerId = window.setInterval(function () {
 }, 10000);
 
 survey
-    .onPartialSend
+    .onCurrentPageChanged
     .add(function (survey) {
         saveSurveyData(survey);
     });
@@ -43,8 +43,6 @@ survey
     .add(function (survey, options) {
         saveSurveyData(survey);
     });
-
-survey.sendResultOnPageNext = true;
 
 var prevData = window
     .localStorage
